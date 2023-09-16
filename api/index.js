@@ -6,11 +6,12 @@ const PORT = 5050;
 require("dotenv").config();
 const cors = require("cors");
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:3000",
-//   })
-// );
+app.use(
+  cors({
+    // origin: "http://localhost:3000",
+    origin: "https://notion-clone-client-pink.vercel.app",
+  })
+);
 app.use(express.json());
 app.use("/api/v1", require("../src/v1/routes"));
 
