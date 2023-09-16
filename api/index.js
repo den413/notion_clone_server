@@ -17,8 +17,8 @@ app.use("/api/v1", require("../src/v1/routes"));
 
 //DB接続
 try {
-  // mongoose.connect(process.env.MONGODB_URL);
-  mongoose.connect(process.env.VERCEL_MONGODB_URL);
+  mongoose.connect(process.env.MONGODB_URL);
+  // mongoose.connect(process.env.VERCEL_MONGODB_URL);
   console.log("DBと接続中。。。");
 } catch (error) {
   console.log("error");
