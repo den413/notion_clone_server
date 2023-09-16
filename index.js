@@ -22,6 +22,10 @@ try {
   console.log("error");
 }
 
+app.get("/", (req, res) => {
+  res.send("Express Server");
+});
+
 app.listen(PORT, () => {
   console.log("起動中");
 });
